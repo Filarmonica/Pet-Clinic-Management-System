@@ -2,6 +2,7 @@ package com.sda.petclinic.model;
 
 import javax.persistence.*;
 import java.util.Date;
+
 @Entity
 @Table(name = "consult")
 public class Consult {

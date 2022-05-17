@@ -1,11 +1,16 @@
 package com.sda.petclinic.utils;
 
+import java.util.Properties;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
+
 import java.util.Properties;
+
+
+
 
 public abstract class AbstractSessionManager {
     private static final String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
@@ -16,8 +21,7 @@ public abstract class AbstractSessionManager {
     private static final String DATABASE_USERNAME = "root";
     private static final String DATABASE_PASSWORD = "root";
 
-
-    private static final String DATABASE_SHOW_SQL = "true";
+    private static final String DATABASE_SHOW_SQL = "false";
 
     //private static final String DATABASE_HBM2DDL_AUTO = "create-drop";
     private static final String DATABASE_HBM2DDL_AUTO = "update";
