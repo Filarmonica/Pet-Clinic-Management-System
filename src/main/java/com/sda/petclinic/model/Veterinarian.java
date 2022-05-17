@@ -1,4 +1,5 @@
 package com.sda.petclinic.model;
+
 import javax.persistence.*;
 
 @Entity
