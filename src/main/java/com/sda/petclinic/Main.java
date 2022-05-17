@@ -34,6 +34,9 @@ public class Main {
                 case SHOW_ALL:
                     veterinarianController.showAllVeterinarian();
                     break;
+                case DELETE_ID:
+                    veterinarianController.deleteById();
+                    break;
                 case UNKNOWN:
                     break;
                 case EXIT:
