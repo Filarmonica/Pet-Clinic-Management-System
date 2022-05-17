@@ -1,6 +1,6 @@
 package com.sda.petclinic.controller;
 
-import com.sda.petclinic.model.Veterinarian;
+
 import com.sda.petclinic.service.VeterinarianService;
 import com.sda.petclinic.service.VeterinarianServiceImpl;
 import com.sda.petclinic.service.dto.VeterinarianDto;
@@ -57,4 +57,15 @@ public class VeterinarianController {
                 );
     }
 
+    public void deleteById() {
+        try {
+            System.out.println("Please insert veterinarian ID: ");
+            String idString = scanner.nextLine();
+            long id = Long.parseLong(idString);
+            veterinarianService.deleteById(id);
+            System.out.println("Veterinarian was deleted successfully");
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid ID");
+        }
+    }
 }
