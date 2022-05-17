@@ -37,6 +37,8 @@ public class Main {
                 case DELETE_ID:
                     veterinarianController.deleteById();
                     break;
+                case UPDATE:
+                    veterinarianController.update();
                 case UNKNOWN:
                     break;
                 case EXIT:

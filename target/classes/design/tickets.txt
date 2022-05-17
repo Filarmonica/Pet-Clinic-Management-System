@@ -9,7 +9,7 @@
   As a user I should be able to delete an existing vet by id.
 
   PCMS-4:
-  As a user, I should be able to update an existing vet by id. I sohuld be able to update: firstName, lastName, address, speciality.
+  As a user, I should be able to update an existing vet by id. I should be able to update: firstName, lastName, address, speciality.
 
   PCMS-5:
   As a user, I should be able to add a new pet. I should be able to specify: race, birthdate, isVaccinated, ownername.
