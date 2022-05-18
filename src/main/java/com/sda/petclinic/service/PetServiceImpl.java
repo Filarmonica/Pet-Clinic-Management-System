@@ -1,6 +1,7 @@
 package com.sda.petclinic.service;
 
 import com.sda.petclinic.model.Client;
+import com.sda.petclinic.model.Pet;
 import com.sda.petclinic.repository.ClientRepository;
 import com.sda.petclinic.repository.ClientRepositoryImpl;
 import com.sda.petclinic.repository.PetRepository;
@@ -42,5 +43,8 @@ public class PetServiceImpl implements PetService {
             Client client = new Client(ownerFirstName,ownerLastName,null,null);
             clientRepository.create(client);
         }
+        Pet pet = new Pet(race, birthDate,isVaccinated);
+        pet.setOwner(clientResult.get());
+        petRepository.create(pet);
     }
 }

@@ -1,10 +1,8 @@
 package com.sda.petclinic.controller;
 
-
 import com.sda.petclinic.service.VeterinarianService;
 import com.sda.petclinic.service.VeterinarianServiceImpl;
 import com.sda.petclinic.service.dto.VeterinarianDto;
-
 import java.security.InvalidParameterException;
 import java.util.List;
 import java.util.Scanner;
