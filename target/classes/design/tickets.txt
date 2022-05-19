@@ -1,40 +1,59 @@
 
- PCMS-1:
+DONE PCMS-1:
  As a user of the system I should be able to create a new Vet. I should be able to specify id, firstName, lastName, address, speciality.
 
- PCMS-2:
+DONE PCMS-2:
  As a user I should be able to view all the vets. I should be able to see for each vet id, firstName, lastName, address, speciality.
 
-  PCMS-3:
+ DONE PCMS-3:
   As a user I should be able to delete an existing vet by id.
 
-  PCMS-4:
+ DONE PCMS-4:
   As a user, I should be able to update an existing vet by id. I should be able to update: firstName, lastName, address, speciality.
 
-  PCMS-5:
+ DONE PCMS-5:
   As a user, I should be able to add a new pet. I should be able to specify: race, birthdate, isVaccinated, ownerFirstName, ownerLastName.
 
-  PCMS-6:
+ HOMEWORK PCMS-6:
    As a user I should be able to view all the pets. I should be able to see for each pet id, race, birthdate, isVaccinated, ownername.
 
-  PCMS-7:
+ HOMEWORK PCMS-7:
    As a user I should be able to delete an existing pet by id.
 
-  PCMS-8:
+ HOMEWORK PCMS-8:
    As a user, I should be able to update an existing pet by id. I should be able to update: race, birthdate, isVaccinated, ownername.
 
   PCMS-9:
   As a user, I should be able to add a new consult. I should be able to specify: veterinarian_id, pet_id, date, description.
 
-  PCMS-10:
+ HOMEWORK PCMS-10:
   As a user I should be able to view all the consults. I should be able to see for each consult id, veterinarian_id, pet_id, date, description.
 
-  PCMS-11:
+ HOMEWORK PCMS-11:
   As a user, I should be able to update the description of a consult.
 
-  PCMS-12:
+ DONE PCMS-12:
   Define hibernate database mode.
 
-  PCMS-13:
+ DONE PCMS-13:
   Create base repository classes.
+
+ DONE PCMS-14:
+  As a user I should be able to view all the vaccinated pets
+
+  PCMS-15:
+  As a user I should be able to view all the pets for a client_id.
+
+  PCMS-16:
+  As a user I should be able to view all the consults with unvaccinated pets
+
+  PCMS-17:
+  As a user I should be able to view all the clients with more than one pets.
+
+  PCMS-18:
+  As a user I should be able to view all the consults made by a vet in a specific period
+  I should be able to provide the veterinarian_id, start period inclusive and end period inclusive.
+
+  PCMS-19:
+  As a user I should be able to filter veterinarians by multiple parameters with the mention that every parameter is optional
 

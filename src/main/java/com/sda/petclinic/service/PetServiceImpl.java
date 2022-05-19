@@ -9,6 +9,7 @@ import com.sda.petclinic.repository.PetRepositoryImpl;
 import com.sda.petclinic.service.exception.InvalidParameterException;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 public class PetServiceImpl implements PetService {
@@ -42,9 +43,15 @@ public class PetServiceImpl implements PetService {
         if(clientResult.isEmpty()){
             Client client = new Client(ownerFirstName,ownerLastName,null,null);
             clientRepository.create(client);
+            clientResult= Optional.of(client);
         }
         Pet pet = new Pet(race, birthDate,isVaccinated);
         pet.setOwner(clientResult.get());
         petRepository.create(pet);
+    }
+
+    @Override
+    public List<Pet> findAllVaccinated() {
+        return petRepository.findAllVaccinated();
     }
 }

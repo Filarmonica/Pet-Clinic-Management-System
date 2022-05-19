@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class PetController {
 
-    private static final String DATE_FORMAT = "dd-MM--yyyy";
+    private static final String DATE_FORMAT = "dd-MM-yyyy";
     private static final SimpleDateFormat FORMATTER = new SimpleDateFormat(DATE_FORMAT);
     private final PetService petService;
     private final Scanner scanner;
@@ -42,6 +42,8 @@ public class PetController {
             String lastName = scanner.nextLine();
 
             petService.create(raceInput, birthDate, isVaccinatedState, firstName, lastName);
+
+
         } catch (ParseException e) {
             System.out.println("Please insert a correct date of birth " + DATE_FORMAT);
         } catch (InputMismatchException e) {
@@ -50,6 +52,16 @@ public class PetController {
             System.out.println(e.getMessage());
         } catch (Exception e) {
             System.out.println("Internal server error.");
+            e.printStackTrace();
         }
+    }
+    public void showAllVaccinated(){
+        petService.findAllVaccinated()
+                .stream()
+                .forEach(pet ->
+                        System.out.println(
+                                "race: "+pet.getRace()+
+                                " Date of Birth: "+ FORMATTER.format(pet.getDateOfBirth())+
+                                " Vaccinated?: "+(pet.getVaccinated()?"Yes":"No")));
     }
 }
