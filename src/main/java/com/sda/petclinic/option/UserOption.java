@@ -10,6 +10,7 @@ public enum UserOption {
     UPDATE("Update existing veterinarian",4),
     ADD_NEW_PET("Add a new pet", 5),
     VIEW_ALL_VACCINATED("View all vaccinated pets", 6),
+    VIEW_ALL_PETS_FOR_CLIENT_ID("View pets by client ID", 7),
     EXIT("Exit", 999),
     UNKNOWN("Unknown option, try again",  1000);
 
@@ -31,7 +32,7 @@ public enum UserOption {
     public static void printAlloptions(){
         System.out.println("+-----------------------------+");
         Arrays.stream(UserOption.values())
-                .filter(userOption -> !userOption.equals(UserOption.UNKNOWN))
+                .filter(userOption -> !UserOption.UNKNOWN.equals(userOption))
                 .forEach(option -> System.out.println(option.prettyName+" -> "+option.getOptionNumber()));
     }
 
