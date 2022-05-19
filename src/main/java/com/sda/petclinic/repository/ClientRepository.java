@@ -9,4 +9,6 @@ public interface ClientRepository extends BaseRepository<Client, Long> {
 
     Optional<Client> findByFirstNameAndLastName(String firstName, String lastName);
 
+    Optional<Client> findByIdAndLoadPets(Long id);
+
 }
